@@ -1,4 +1,3 @@
-content = """# ---
 # title: "Mapping Dutch and Korean Population Distribution Using the 2020 US Senate"
 # author: "BoatGoBinter"
 # date: "2025-10-22"
@@ -238,8 +237,11 @@ fourmaps <- tmap_arrange(
 
 fourmaps
 
-tmap_save(fourmaps, "four_maps.png", width = 16, height = 12, units = "in", dpi = 300)
-"""
-with open("/mnt/data/Project_2.R", "w", encoding="utf-8") as f:
-    f.write(content)
-"/mnt/data/Project_2.R"
+tmap_save(
+  fourmaps,
+  "four_maps.png",
+  width = 16,
+  height = 12,
+  units = "in",
+  dpi = 300
+)
