@@ -1,5 +1,5 @@
 # title: "Mapping Dutch and Korean Population Distribution Using the 2020 US Senate"
-# author: "BoatGoBinter"
+# author: "BoatGoBinter AKA Mymy"
 # date: "2025-10-22"
 # output: html_document
 # ---
@@ -245,3 +245,4 @@ tmap_save(
   units = "in",
   dpi = 300
 )
+
