@@ -1,4 +1,4 @@
-# title: "Mapping Dutch and Korean Population Distribution Using the 2020 US Senate"
+# title: "Mapping Dutch and Korean Population Distributions (Raw and Normalized) Using the 2020 US Senate"
 # author: "BoatGoBinter AKA Mymy"
 # date: "2025-10-22"
 # output: html_document
@@ -48,7 +48,7 @@ glimpse(dutch_people)
 # {r}
 library(tigris)
 
-tmap_mode("plot")   # ← make sure this is on its own line
+tmap_mode("plot")  
 
 # move ak/hr/pr for easier lay out
 dutch_shift_raw <- tigris::shift_geometry(dutch_people)
@@ -66,7 +66,7 @@ labs_raw <- paste0(
   formatC(tail(brks_raw, -1), format = "d", big.mark = ",")
 )
 
-# 4) dutch colors
+dutch colors
 pal_raw <- colorRampPalette(c("#21468B", "#FFFFFF", "#AE1C28"))(length(brks_raw) - 1)
 
 
@@ -134,7 +134,7 @@ labs_pct <- paste0(
   formatC(tail(brks_pct, -1), digits = 1, format = "f"), "%"
 )
 
-# add dutch colors
+# dutch colors
 pal_pct <- colorRampPalette(c("#21468B", "#FFFFFF", "#AE1C28"))(length(brks_pct) - 1)
 
 dutch_pop_normalized <- tm_shape(dutch_shift_pct) +
@@ -245,4 +245,5 @@ tmap_save(
   units = "in",
   dpi = 300
 )
+
 
